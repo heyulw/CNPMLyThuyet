@@ -1,0 +1,73 @@
+﻿@model IEnumerable<CNPMLyThuyet.Model.NhanVien>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_PhongBanLayout.cshtml";
+}
+
+<div style="margin:10px auto;width:70%">
+
+
+    <p>
+        @Html.ActionLink("Thêm mới nhân viên", "Create", null, new { @class = "btn btn-primary" })
+    </p>
+    <table class="table">
+        <tr>
+            <th>
+                Mã nhân viên
+            </th>
+            <th>
+                Tên nhân viên
+            </th>
+            <th>
+                Số điện thoại
+            </th>
+            <th>
+                Ngày sinh
+            </th>
+            <th>
+                Địa chỉ
+            </th>
+            <th>
+                Mã phòng ban
+            </th>
+            <th>
+                Mật khẩu
+            </th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.MaNV)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TenNV)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.SDT)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.NgaySinh)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DiaChi)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.PhongBan.MaPB)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.MatKhau)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.MaNV }, new { @class = "btn btn-success" })|
+                    @Html.ActionLink("Details", "Details", new { id = item.MaNV }, new { @class = "btn btn-primary" })|
+                    @Html.ActionLink("Delete", "Delete", new { id = item.MaNV }, new { @class = "btn btn-danger" })
+                </td>
+            </tr>
+        }
+
+    </table>
+
+</div>

@@ -1,0 +1,31 @@
+﻿
+@{
+    ViewBag.Title = "Login";
+    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+}
+
+<div class="row">
+  
+    
+    <div class="col-md-6" style="border:1px ridge">
+      
+        <h2>@ViewBag.ThongBao</h2>
+
+        @using (Html.BeginForm("Login", "Account"))
+        {
+            @Html.ValidationSummary(true)
+            <div class="mb-3 mt-3">
+                <label  class="form-label">Mã nhân viên :</label>
+                <input  class="form-control"  name="MaNV"
+                       required>
+            </div>
+            <div class="mb-3">
+                <label for="pwd" class="form-label">PASSWORD:</label>
+                <input type="password" class="form-control" id="pwd" name="MatKhau"
+                       required>
+            </div>
+            <button type="submit" class="btn btn-primary">XÁC NHẬN</button>
+        }
+    </div>
+</div>
+

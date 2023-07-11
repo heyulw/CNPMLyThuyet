@@ -1,0 +1,64 @@
+﻿@model IEnumerable<CNPMLyThuyet.Model.MatBang>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_PhongBanLayout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.TenMB)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TinhTrang)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.GiaTien)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HopDong.MaHD)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.KhachHang.HoVaTen)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Tang.TenTang)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.TenMB)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TinhTrang)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.GiaTien)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HopDong.MaHD)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.KhachHang.HoVaTen)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Tang.TenTang)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.MaMB }) |
+            @Html.ActionLink("Details", "Details", new { id=item.MaMB }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.MaMB })
+        </td>
+    </tr>
+}
+
+</table>

@@ -1,0 +1,35 @@
+﻿@model CNPMLyThuyet.Model.HopDong
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_PhongBanLayout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>HopDong</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.NgayKi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NgayKi)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NgayHetHan)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NgayHetHan)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.MaHD }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

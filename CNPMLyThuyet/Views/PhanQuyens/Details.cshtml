@@ -1,0 +1,43 @@
+﻿@model CNPMLyThuyet.Model.PhanQuyen
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_PhongBanLayout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>PhanQuyen</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.STT)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.STT)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ChucNang.TenCN)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ChucNang.TenCN)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PhongBan.TenPB)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PhongBan.TenPB)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

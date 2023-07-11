@@ -1,0 +1,67 @@
+﻿@model CNPMLyThuyet.Model.MatBang
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_PhongBanLayout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>MatBang</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.TenMB)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TenMB)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TinhTrang)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TinhTrang)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.GiaTien)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GiaTien)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HopDong.MaHD)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HopDong.MaHD)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.KhachHang.HoVaTen)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.KhachHang.HoVaTen)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Tang.TenTang)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Tang.TenTang)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.MaMB }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
